@@ -1,9 +1,11 @@
-from secretsKeyFolder.test import secretKey
+from secretsKey.secret import Encrypt
 
 
 def main():
-    key = secretKey.mainKey
-    print(key)
+    # key = Encrypt.getMainKey()
+    # print(key)
+    encryptor = Encrypt()
+    print(encryptor.encryptString("abc","qwe","123"))
 
 
 if __name__ == "__main__":
