@@ -1,11 +1,16 @@
-from secretsKey.secret import Encrypt
+from secretsKey.encrypt import Encrypt
+from secretsKey.decrypt import Decrypt
 
 
 def main():
     # key = Encrypt.getMainKey()
     # print(key)
     encryptor = Encrypt()
-    print(encryptor.encryptString("abc","qwe","123"))
+    decryptor = Decrypt()
+    # Name Username Password
+    encPass = encryptor.encryptString("abc","qwe","1234")
+
+    print(decryptor.decryptString(encPass))
 
 
 if __name__ == "__main__":
